@@ -10,7 +10,7 @@ function App() {
   };
 
   return (
-    <div style={{backgroundColor}}>
+    <div className='App' style={{backgroundColor}}>
       <h1>Color Picker</h1>
       <div className='color-palette'>
         {colors.map((color,index) =>
@@ -24,6 +24,15 @@ function App() {
            </div>    
         ))}
       </div>
+
+      <div className='custom-color-picker'>
+        <input type='color'
+               value={backgroundColor}
+               onChange={(e)=> handleColorChange(e.target.value)}>
+
+               </input>
+      </div>
+
     </div>
   );
 }
